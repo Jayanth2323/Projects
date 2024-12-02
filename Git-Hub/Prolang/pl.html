@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Coder</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <h2>Available Skills</h2>
+            <div class="product">
+                <h3>Python</h3>
+                <img src="images/python.png" alt="Python" />
+                <p>Learn Python, a versatile programming language for web development, data science, and more!</p>
+                <button onclick="buyProduct('Python')">Buy Now</button>
+            </div>
+            <div class="product">
+                <h3>Java</h3>
+                <img src="images/java.png" alt="Java" />
+                <p>Master Java, a powerful language used for building enterprise-level applications.</p>
+                <button onclick="buyProduct('Java')">Buy Now</button>
+            </div>
+            <div class="product">
+                <h3>JavaScript</h3>
+                <img src="images/javascript.png" alt="JavaScript" />
+                <p>Get started with JavaScript, the language of the web for interactive and dynamic content.</p>
+                <button onclick="buyProduct('JavaScript')">Buy Now</button>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing the best programming language resources and courses to help you succeed in your coding journey.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Coder. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

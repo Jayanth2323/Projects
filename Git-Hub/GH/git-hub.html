@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JakeTech</title>
+    <link rel="stylesheet" href="git-hub.css">
+    <!-- <script src="git-hub.js" defer></script> Added defer to ensure JS loads after HTML -->
+</head>
+
+<body>
+    <main>
+        <h1>Git-Hub</h1>
+        <form>
+            <!-- id="loginForm" action="/login" method="POST" -->
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="10"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" required>
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </main>
+    <script src="git-hub.js">
+        // document.getElementById("loginForm").addEventListener("submit", function (event) 
+        // {
+        //     event.preventDefault(); // Prevent form submission
+        //     window.location.href = "/login"; // Redirect to the login page
+        // });
+    </script> <!-- Moved JS reference here -->
+</body>
+
+</html>

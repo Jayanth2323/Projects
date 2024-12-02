@@ -1,0 +1,587 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay's Tech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .tech {
+            border: 3px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px;
+            text-align: center;
+            display: inline-block;
+            width: 200px;
+        }
+
+        .tech img {
+            width: 100%; /* Ensure images fit within the card */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .tech button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tech button:hover {
+            background-color: #45a049;
+        }
+
+        #cart {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 5px 0;
+        }
+
+        form input,
+        form textarea {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        #contact {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #contactForm {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contactForm label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Jay's Tech Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#techs">Techs</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="techs">
+            <h2>Available Techs</h2>
+            <div class="tech" data-name="Tech 1" data-price="20">
+                <h3>Tech 1</h3>
+                <img src="tech1.jpg" alt="Tech 1">
+                <p>Price: $20</p>
+                <button onclick="addToCart('Tech 1', 20)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 2" data-price="30">
+                <h3>Tech 2</h3>
+                <img src="tech2.jpg" alt="Tech 2">
+                <p>Price: $30</p>
+                <button onclick="addToCart('Tech 2', 30)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 3" data-price="40">
+                <h3>Tech 3</h3>
+                <img src="tech3.jpg" alt="Tech 3">
+                <p>Price: $40</p>
+                <button onclick="addToCart('Tech 3', 40)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 4" data-price="50">
+                <h3>Tech 4</h3>
+                <img src="tech4.jpg" alt="Tech 4">
+                <p>Price: $50</p>
+                <button onclick="addToCart('Tech 4', 50)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 5" data-price="60">
+                <h3>Tech 5</h3>
+                <img src="tech5.jpg" alt="Tech 5">
+                <p>Price: $60</p>
+                <button onclick="addToCart('Tech 5', 60)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 6" data-price="70">
+                <h3>Tech 6</h3>
+                <img src="tech6.jpg" alt="Tech 6">
+                <p>Price: $70</p>
+                <button onclick="addToCart('Tech 6', 70)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 7" data-price="80">
+                <h3>Tech 7</h3>
+                <img src="tech7.jpg" alt="Tech 7">
+                <p>Price: $80</p>
+                <button onclick="addToCart('Tech 7', 80)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 8" data-price="90">
+                <h3>Tech 8</h3>
+                <img src="tech8.jpg" alt="Tech 8">
+                <p>Price: $90</p>
+                <button onclick="addToCart('Tech 8', 90)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 9" data-price="100">
+                <h3>Tech 9</h3>
+                <img src="tech9.jpg" alt="Tech 9">
+                <p>Price: $100</p>
+                <button onclick="addToCart('Tech 9', 100)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 10" data-price="110">
+                <h3>Tech 10</h3>
+                <img src="tech10.jpg" alt="Tech 10">
+                <p>Price: $110</p>
+                <button onclick="addToCart('Tech 10', 110)">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0</p>
+            <button onclick="clearCart()">Clear Cart</button>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jay's Tech Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(techName, techPrice) {
+            cart.push({ name: techName, price: techPrice });
+            total += techPrice;
+            updateCart();
+            alert(`Added ${techName} to cart. Total: $${total}`);
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            const totalPrice = document.getElementById('total-price');
+
+            if (!cartItems || !cartCount || !totalPrice) {
+                return;
+            }
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = 'Your cart is empty.';
+                cartCount.textContent = 0;
+                totalPrice.textContent = 'Total: $ 0';
+                return;
+            }
+
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price}`;
+                cartItems.appendChild(li);
+            });
+
+            cartCount.textContent = cart.length;
+            totalPrice.textContent = `Total: $${total}`;
+
+            document.getElementById('cart').style.display = 'block';
+            document.getElementById('cart-items').style.display = 'block';
+            document.getElementById('total-price').style.display = 'block';
+
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('techs').style.display = 'none';
+        }
+
+        function clearCart() {
+            cart = [];
+            total = 0;
+            updateCart();
+            alert('Cart has been cleared.');
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            alert(`Thank you, ${name}! Your message has been sent.`);
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay's Tech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .tech {
+            border: 3px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px;
+            text-align: center;
+            display: inline-block;
+            width: 200px;
+        }
+
+        .tech img {
+            width: 100%;
+            height: auto;
+        }
+
+        .tech button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tech button:hover {
+            background-color: #45a049;
+        }
+
+        #cart {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 5px 0;
+        }
+
+        form input,
+        form textarea {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        #contact {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #contactForm {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contactForm label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Jay's Tech Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#techs">Techs</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="techs">
+            <h2>Available Techs</h2>
+            <div class="tech" data-name="Tech 1" data-price="20">
+                <h3>Tech 1</h3>
+                <img src="tech1.jpg" alt="Tech 1">
+                <p>Price: $20</p>
+                <button onclick="addToCart('Tech 1', 20)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 2" data-price="30">
+                <h3>Tech 2</h3>
+                <img src="tech2.jpg" alt="Tech 2">
+                <p>Price: $30</p>
+                <button onclick="addToCart('Tech 2', 30)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 3" data-price="40">
+                <h3>Tech 3</h3>
+                <img src="tech3.jpg" alt="Tech 3">
+                <p>Price: $40</p>
+                <button onclick="addToCart('Tech 3', 40)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 4" data-price="50">
+                <h3>Tech 4</h3>
+                <img src="tech4.jpg" alt="Tech 4">
+                <p>Price: $50</p>
+                <button onclick="addToCart('Tech 4', 50)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 5" data-price="60">
+                <h3>Tech 5</h3>
+                <img src="tech5.jpg" alt="Tech 5">
+                <p>Price: $60</p>
+                <button onclick="addToCart('Tech 5', 60)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 6" data-price="70">
+                <h3>Tech 6</h3>
+                <img src="tech6.jpg" alt="Tech 6">
+                <p>Price: $70</p>
+                <button onclick="addToCart('Tech 6', 70)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 7" data-price="80">
+                <h3>Tech 7</h3>
+                <img src="tech7.jpg" alt="Tech 7">
+                <p>Price: $80</p>
+                <button onclick="addToCart('Tech 7', 80)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 8" data-price="90">
+                <h3>Tech 8</h3>
+                <img src="tech8.jpg" alt="Tech 8">
+                <p>Price: $90</p>
+                <button onclick="addToCart('Tech 8', 90)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 9" data-price="100">
+                <h3>Tech 9</h3>
+                <img src="tech9.jpg" alt="Tech 9">
+                <p>Price: $100</p>
+                <button onclick="addToCart('Tech 9', 100)">Add to Cart</button>
+            </div>
+            <div class="tech" data-name="Tech 10" data-price="110">
+                <h3>Tech 10</h3>
+                <img src="tech10.jpg" alt="Tech 10">
+                <p>Price: $110</p>
+                <button onclick="addToCart('Tech 10', 110)">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0</p>
+            <button onclick="clearCart()">Clear Cart</button>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Jay's Tech Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(techName, techPrice) {
+            cart.push({ name: techName, price: techPrice });
+            total += techPrice;
+            updateCart();
+            alert(`Added ${techName} to cart. Total: $${total}`);
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            const totalPrice = document.getElementById('total-price');
+
+            cartItems.innerHTML = '';
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<li>Your cart is empty.</li>';
+                cartCount.textContent = 0;
+                totalPrice.textContent = 'Total: $0';
+                return;
+            }
+
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price}`;
+                cartItems.appendChild(li);
+            });
+
+            cartCount.textContent = cart.length;
+            totalPrice.textContent = `Total: $${total}`;
+        }
+
+        function clearCart() {
+            cart = [];
+            total = 0;
+            updateCart();
+            alert('Cart has been cleared.');
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            alert(`Thank you, ${name}! Your message has been sent.`);
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+
+</html>
